@@ -1,0 +1,545 @@
+html{
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, .nav-tab{
+	font-family: 'Droid Sans', sans-serif;
+}
+p, a, span{
+	font-family: 'Merriweather', serif;
+}
+.font-135{
+	font-size: 135%;
+}
+.active-menu{
+	background-color: blue;
+	font-weight: bold;
+}
+.active-menu a:hover{
+	background-color: rgb(0,0,205);
+}
+.float-left{
+	display: block;
+	float: left;
+	clear: none;
+}
+.wrapper{
+	min-height: 100vh;
+	background-color: #ddd;
+}
+.content{
+	min-height: 100vh;
+	width: 100%;
+	margin: auto;
+	background-color: #fffdef;
+	padding-top: 4px;
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+}
+body{
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+figure{
+	margin: 1% auto;
+
+}
+figure img{
+	width: 100%;
+}
+a, a:active, a:hover {
+   outline: 0 !important;
+}
+
+h1 {
+	margin: 0;
+
+}
+
+.site-divider{
+	min-height: 50vh;
+	height: auto;
+}
+.site-divider h1{
+	text-align: center;
+	color: #333;
+	font-size: 250%;
+	margin: 1% 0 3% 0;
+}
+.site-divider h2{
+	color: #333;
+	margin-top: 0;
+}
+.site-divider p{
+	color: #333;
+
+}
+.column-1,
+.column-2,
+.column-3,
+.column-4,
+.column-5,
+.column-6,
+.column-7,
+.column-8,
+.column-9,
+.column-10,
+.column-11,
+.column-12 {
+	width: 100%;
+	float: none;
+}
+/* fixes long urls and links */
+.dont-break-out {
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
+
+.column + .column {
+	margin-left: 0;
+}
+.row,
+.column {
+    box-sizing: border-box;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.column {
+    position: relative;
+    float: left;
+}
+.vert-space + .vert-space{
+	margin-top: 1%;
+}
+
+
+.main-header{
+	height: 45px;
+	width: 100%;
+	position:fixed;
+	background-color: #333;
+	z-index: 4;
+}
+
+/* Drawer Navigation Styling */
+.drawer-hamburger{
+	padding-top: 10px !important;
+	padding-right: 5% !important;
+	border-color: white !important;
+	outline-color: white !important;
+	color: white !important;
+}
+.drawer-hamburger-icon{
+	background-color: white !important;
+}
+.drawer-hamburger-icon:after{
+	background-color: white !important;
+}
+.drawer-hamburger-icon:before{
+	background-color: white !important;
+
+}
+.drawer-nav{
+	background-color: #333;
+}
+/* main header in drawer */
+.drawer-brand{
+	background-color: #ccc;
+	color: #333;
+	border-bottom: 1px solid #333;
+	font-size: 180%;
+}
+/* links inside drawer */
+.drawer-menu-item{
+	color: #ccc;
+	text-decoration: none !important;
+	font-size: 120%;
+	font-family: sans-serif;
+	 transition: border-width .1s ease-in-out;
+	 	-webkit-transition:border-width .1s ease-in-out;
+	  -moz-transition:border-width .1s ease-in-out;
+	  -o-transition:border-width .1s ease-in-out;
+}
+.drawer-menu-item:hover{
+	background-color: #ccc;
+	color: #333;
+	border-left: 15px #003366 solid;
+}
+.main-header>h1{
+	font-size: 140%;
+
+}
+
+.nav-bar{
+	display: none;
+
+}
+
+.home-splash-image{
+	position: relative;
+	/* fall-back */
+	z-index:0;
+	padding:0;
+	height: 92vh;
+	width: 100%;
+	background-image: url(../images/splash1-min.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.about-splash-image{
+	position: relative;
+	width: 100%;
+	height: 60vh;
+	background-image: url(../images/city-mobile.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.about-splash-image h1{
+	color: white;
+	position: absolute;
+	bottom: 10;
+	left: 10;
+}
+.floating-text-box{
+
+	color: white;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  height:500px;
+	width: 100%;
+	text-align: center;
+}
+.floating-text-box h1{
+	text-shadow: 0px 0px 5px #222
+}
+.floating-text-box h2{
+	font-size: 150%;
+	font-family: sans-serif;
+	color: white;
+	text-shadow: 0px 0px 5px #222;
+
+}
+.floating-text-box h1{
+	font-size: 300%;
+
+}
+.floating-text-box a{
+	display:inline-block;
+	width: 100px;
+	height: 30px;
+	background-color: #333;
+	border: 1px solid #222;
+	color: white;
+	text-decoration: none;
+	line-height: 30px;
+	font-family: sans-serif;
+}
+.floating-text-box a:hover{
+	background-color: #222;
+}
+.floating-text-box > a + a{
+	margin-left: 20px;
+}
+.circle-image{
+    border-radius: 50%;
+}
+.profile-pic{
+		max-width: 320px;
+		margin: auto;
+		display: block;
+}
+
+.project-image{
+		width: 90%;
+		max-width: 500px;
+		margin: auto;
+		display: block;
+		border-radius: 5%;
+}
+.profile-contact{
+		max-width: 320px;
+		list-style-type: none;
+		margin: auto;
+		padding: 0;
+}
+.social-media-li{
+		text-align:center;
+		margin: 1% 0 1% 0;
+}
+.profile-contact a{
+		margin: auto;
+		display: inline-block;
+}
+.profile-contact .email-link{
+	text-align:center;
+
+}
+.profile-contact .email-link>a{
+	color: #333;
+	text-decoration: none;
+	display: inline-block;
+	margin: auto;
+}
+.profile-contact a>i{
+	color: #333;
+}
+
+.profile-contact a>i:hover{
+	color: #222;
+}
+.resume-button{
+	text-align: center;
+	padding: 1%;
+}
+.resume-button>a{
+	color: white;
+	background-color: #333;
+	text-decoration: none;
+	margin: auto;
+	padding: 10px;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 130%;
+	border-radius: 4%;
+}
+.resume-button>a:hover{
+	background-color: #222;
+}
+.project-row+.project-row{
+	margin-top: 5%;
+}
+.project-row>.column:nth-child(1){
+	text-align: center;
+
+}
+.project-row h2{
+	display: inline-block;
+
+}
+.project-row p{
+	width: 90%;
+	margin: auto;
+	padding: 5%;
+}
+.vert-align{
+	vertical-align: middle;
+
+}
+#my-projects{
+	background-color: #ccc;
+	border-top: #aaa 1px solid;
+}
+#contact{
+	min-height: 100vh
+
+}
+.language-entry{
+	padding: 1%;
+	color: #333;
+}
+.min-width-250{
+	min-width: 250px;
+
+}
+@media (min-width: 550px) {
+
+	.column-1 {
+		width: 6.86666666667%;
+	}
+
+	.column-2 {
+		width: 15.3333333333%;
+	}
+
+	.column-3 {
+		width: 23.8%;
+	}
+
+	.column-4 {
+		width: 32.2666666667%;
+	}
+
+	.column-5 {
+		width: 40.7333333333%;
+	}
+
+	.column-6 {
+		width: 49.2%;
+	}
+
+	.column-7 {
+		width: 57.6666666667%;
+	}
+
+	.column-8 {
+		width: 66.1333333333%;
+	}
+
+	.column-9 {
+		width: 74.6%;
+	}
+
+	.column-10 {
+		width: 83.0666666667%;
+	}
+
+	.column-11 {
+		width: 91.5333333333%;
+	}
+
+	.column-12 {
+		width: 100%;
+	}
+	.font-150{
+		font-size: 150%;
+	}
+	.font-200{
+		font-size: 200%;
+	}
+	.site-divider{
+		box-sizing: border-box;
+		width: 100%;
+		margin: auto;
+		padding: 2% 7% 2% 7%;
+	}
+
+	.column + .column {
+    	margin-left: 1.6%;
+	}
+	.column > img{
+		height: auto;
+		width: 100%;
+	}
+	.column > .logo{
+		max-width: 	250px;
+	}
+	.inline-block{
+		display: inline-block;
+	}
+	.centered{
+		text-align: center;
+	}
+	.red{
+		color: red;
+	}
+	.blue{
+		color: blue;
+	}
+	.purple{
+		color: purple;
+	}
+	.green{
+		color: green;
+	}
+	.orange{
+		color: orange;
+	}
+	.dkgrey{
+		color: #333;
+	}
+	.brown{
+		color: brown;
+	}
+	.margin-auto{
+		display: block;
+		margin: auto;
+	}
+	.drawer-toggle, .drawer-hamburger, .sr-only, .drawer-hamburger-icon, .drawer-nav{
+		display: none;
+	}
+
+	.main-header{
+		background-color: transparent;
+
+	}
+	.content{
+		width: 85%;
+	}
+	.nav-bar{
+		display: block;
+		text-align: right;
+		width: 100%;
+		height: auto;
+		background-color: #333;
+		padding-right: 10%;
+	}
+	.nav-list{
+		display: inline-block;
+		list-style-type:none;
+		margin:0;
+		background: #333;
+		padding-left: 0;
+
+	}
+	.nav-tab{
+		border-top: none;
+		display:inline-block;
+		margin-right: 1px;
+		width: auto;
+	}
+	.nav-tab>a{
+		display:block;
+		width: auto;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #fff;
+		text-decoration: none;
+		cursor: pointer;
+		padding: 5px 10px 5px 10px;
+		font-size: 110%;
+		border-bottom: 2px solid #333;
+	}
+	.nav-tab:not(.active-menu) a:hover{
+		background: #222;
+	}
+
+	.project-row p{
+		text-align: left;
+		width: 80%;
+		padding-left: 0;
+	}
+	footer{
+		width: 90%;
+		background-color: #333;
+		color: white;
+		margin: auto;
+	}
+	footer p{
+		height: 150px;
+		margin: 0;
+	}
+}
+@media (min-width: 850px) {
+}
