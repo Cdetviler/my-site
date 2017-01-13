@@ -2,21 +2,41 @@ html{
 	margin: 0;
 	padding: 0;
 }
-h1, h2, h3, h4, .nav-tab{
-	font-family: 'Droid Sans', sans-serif;
+h1{
+	font-family: 'Droid sans', sans-serif;
+	text-transform: uppercase;
 }
-p, a, span{
+
+h2, h3, h4, .nav-tab, .floating-text-box, .language-entry, .resume-button>a{
+	font-family: 'Droid sans', sans-serif;
+}
+p, span{
 	font-family: 'Merriweather', serif;
 }
+.fa{
+	min-width: 23px;
+}
+.skill-bar .fa-rotate-90{
+	margin-left: 2px;
+	margin-right: 8px;
+}
+.clearfix:after {
+	 visibility: hidden;
+	 display: block;
+	 font-size: 0;
+	 content: " ";
+	 clear: both;
+	 height: 0;
+ }
 .font-135{
 	font-size: 135%;
 }
 .active-menu{
-	background-color: blue;
+	background-color:	#51779f;
 	font-weight: bold;
 }
 .active-menu a:hover{
-	background-color: rgb(0,0,205);
+	background-color: #51779f;
 }
 .float-left{
 	display: block;
@@ -208,9 +228,10 @@ h1 {
 	padding:0;
 	height: 92vh;
 	width: 100%;
-	background-image: url(../images/splash1-min.jpg);
+	background-image: url(../images/city.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 .about-splash-image{
 	position: relative;
@@ -226,6 +247,59 @@ h1 {
 	bottom: 10;
 	left: 10;
 }
+.contact-splash{
+	height: auto;
+	background-image: url(../images/contactme.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.contact-square{
+	position: relative;
+	height: auto;
+	width: 90%;
+	margin: 1% 5% 1% 5%;
+	padding: 2% 0 2% 0;
+	min-width: 220px;
+	display: inline-block;
+	color: white;
+	background-color: #333;
+	text-align: center;
+	cursor: pointer;
+}
+
+.contact-square > .floating-text-box{
+	height: 25px;
+	width: 90%;
+	display: none;
+}
+.contact-square:hover > .floating-text-box{
+	display: block;
+	font-size: 80%;
+}
+.contact-square:hover > i{
+	visibility: hidden
+}
+.contact-mail:hover{
+	background-color: rgb(201, 44, 25);
+}
+.contact-fb:hover{
+	background-color: #3b5998;
+}
+.contact-li:hover{
+	background-color: #0077b5;
+}
+.contact-gh:hover{
+	background-color:#6e5494;
+}
+.contact-twitter:hover{
+	background-color: #4099FF;
+}
+.contact-square i{
+	vertical-align: middle;
+	display: inline-block;
+	margin: auto;
+}
 .floating-text-box{
 
 	color: white;
@@ -240,19 +314,18 @@ h1 {
 	text-align: center;
 }
 .floating-text-box h1{
-	text-shadow: 0px 0px 5px #222
+	text-shadow: 0px 0px 5px #222;
+	font-size: 400%;
+	letter-spacing: 3px;
 }
 .floating-text-box h2{
 	font-size: 150%;
-	font-family: sans-serif;
+	font-family: merriweather, serif;
 	color: white;
 	text-shadow: 0px 0px 5px #222;
 
 }
-.floating-text-box h1{
-	font-size: 300%;
 
-}
 .floating-text-box a{
 	display:inline-block;
 	width: 100px;
@@ -262,10 +335,20 @@ h1 {
 	color: white;
 	text-decoration: none;
 	line-height: 30px;
-	font-family: sans-serif;
+	border-radius: 4%;
 }
-.floating-text-box a:hover{
-	background-color: #222;
+.box-button{
+	display:inline-block;
+	width: 100px;
+	height: 30px;
+	background-color: #333;
+	border: 1px solid #333;
+	color: white;
+	text-decoration: none;
+	line-height: 30px;
+	border-radius: 5%;
+	padding: 1%;
+	margin: 1%;
 }
 .floating-text-box > a + a{
 	margin-left: 20px;
@@ -297,7 +380,7 @@ h1 {
 		margin: 1% 0 1% 0;
 }
 .profile-contact a{
-		margin: auto;
+		margin: 1% 1% 1% 1%;
 		display: inline-block;
 }
 .profile-contact .email-link{
@@ -317,9 +400,12 @@ h1 {
 .profile-contact a>i:hover{
 	color: #222;
 }
-.resume-button{
+.center-buttons{
 	text-align: center;
-	padding: 1%;
+}
+.resume-button{
+	cursor: pointer;
+
 }
 .resume-button>a{
 	color: white;
@@ -329,12 +415,9 @@ h1 {
 	padding: 10px;
 	display: inline-block;
 	font-weight: bold;
-	font-size: 130%;
 	border-radius: 4%;
 }
-.resume-button>a:hover{
-	background-color: #222;
-}
+
 .project-row+.project-row{
 	margin-top: 5%;
 }
@@ -355,13 +438,42 @@ h1 {
 	vertical-align: middle;
 
 }
+.vert-span{
+	height: 100%;
+}
+#about-me{
+	background-color: white;
+}
+#about-me p, #about-me h2{
+	padding: 0 5% 0 5%;
+}
 #my-projects{
-	background-color: #ccc;
+	background-image: url(../images/binding_dark.png);
+	background-attachment: fixed;
 	border-top: #aaa 1px solid;
 }
-#contact{
-	min-height: 100vh
+#my-projects h1, #my-projects h2, #my-projects p{
+	color: white;
+}
+#skill-set{
+	background-color: white;
 
+}
+#contact{
+	/*background-image: url(../images/binding_dark.png);
+	background-attachment: fixed;*/
+	background-image: url(../images/contactcity.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+	min-height: 70vh;
+	box-shadow: inset 0 0 5em 1em #000;
+	//padding: 1% 0 3% 0;
+}
+#contact h1{
+	text-shadow: 0px 0px 5px #222;
+	color: white;
 }
 .language-entry{
 	padding: 1%;
@@ -370,6 +482,155 @@ h1 {
 .min-width-250{
 	min-width: 250px;
 
+}
+
+/*
+* Hover.css (http://ianlunn.github.io/Hover/)
+* Version: 2.0.2
+* Author: Ian Lunn @IanLunn
+* Author URL: http://ianlunn.co.uk/
+* Github: https://github.com/IanLunn/Hover
+*/
+
+/* Ripple Out */
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+
+.hvr-ripple-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+.hvr-ripple-out:before {
+  content: '';
+  position: absolute;
+  border: #333 solid 6px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}
+.bg-fabric{
+	background-image: url(../images/binding_dark.png);
+	background-attachment: fixed;
+}
+
+.bg-red{
+	background-color: red;
+	color: white;
+}
+.red{
+	color: red;
+}
+.bg-blue{
+	background-color: #51779f;
+}
+.blue{
+	color: #51779f;
+}
+.bg-purple{
+	background-color: purple;
+	color: white;
+}
+.purple{
+	color: purple;
+}
+.bg-green{
+	background-color: green;
+	color: white;
+}
+.green{
+	color: green;
+}
+.bg-orange{
+	background-color: #CF5300;
+	color: white;
+}
+.orange{
+	color: orange;
+}
+.bg-dkergrey{
+	background-color: #222;
+	color: white;
+}
+.bg-dkgrey{
+	background-color: #333;
+	color: white;
+}
+.dkgrey{
+	color: #333;
+}
+.brown{
+	color: brown;
+}
+.skill-block{
+	min-width: 320px
+}
+.skill-block p{
+
+}
+.skill-content{
+	display:none;
+}
+.skill-block + .skill-block{
+	margin-left: 0
+}
+.skill-bar{
+	height: 50px;
+	font-weight: bold;
+	font-family: 'Droid Sans', sans-serif;
+	cursor: pointer;
+	color: white;
+}
+
+.skill-bar>i{
+	margin-left: 10px;
+}
+.skill-bar>span{
+	font-family: 'Droid Sans', sans-serif;
+
+	line-height: 50px;
+	margin-left: 20px;
+}
+.bar-border{
+	width: 100%;
+	background-color: #51779f;
+	margin: .5% 0 .5% 0;
+}
+.width-90, .width-80, .width-70{
+	width: 0%;
+	transition: width 2s;
+	overflow-x: hidden;
+	-webkit-transition: width 2s;
 }
 @media (min-width: 550px) {
 
@@ -432,9 +693,14 @@ h1 {
 		margin: auto;
 		padding: 2% 7% 2% 7%;
 	}
-
+	.site-divider p{
+		line-height: 1.5em
+	}
 	.column + .column {
     	margin-left: 1.6%;
+	}
+	.skill-block + .skill-block{
+		margin-left: 0
 	}
 	.column > img{
 		height: auto;
@@ -449,30 +715,35 @@ h1 {
 	.centered{
 		text-align: center;
 	}
-	.red{
-		color: red;
-	}
-	.blue{
-		color: blue;
-	}
-	.purple{
-		color: purple;
-	}
-	.green{
-		color: green;
-	}
-	.orange{
-		color: orange;
-	}
-	.dkgrey{
-		color: #333;
-	}
-	.brown{
-		color: brown;
-	}
+
 	.margin-auto{
 		display: block;
 		margin: auto;
+	}
+	.contact-square{
+		position: relative;
+		height: 220px;
+		width: 19.5%;
+		min-width: 220px;
+		margin: 1% 0 1% 0;
+		padding: 0;
+		display: inline-block;
+		color: white;
+		background-color: #333;
+		text-align: center;
+		cursor: pointer;
+	}
+	.bar-border:hover > .skill-bar{
+		width: 100% !important;
+	}
+	.contact-square > .floating-text-box{
+		height: 25px;
+		width: 90%;
+		display: none;
+	}
+	.contact-square:hover > .floating-text-box{
+		display: block;
+		font-size: 80%;
 	}
 	.drawer-toggle, .drawer-hamburger, .sr-only, .drawer-hamburger-icon, .drawer-nav{
 		display: none;
@@ -492,6 +763,7 @@ h1 {
 		height: auto;
 		background-color: #333;
 		padding-right: 10%;
+		box-shadow: 0px 0px 2px #222;
 	}
 	.nav-list{
 		display: inline-block;
@@ -531,14 +803,21 @@ h1 {
 		padding-left: 0;
 	}
 	footer{
-		width: 90%;
+		min-height: 30vh;
+		width: 100%;
 		background-color: #333;
 		color: white;
 		margin: auto;
+		background-image: url(../images/contactcity.jpeg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 	}
-	footer p{
-		height: 150px;
-		margin: 0;
+	footer h1{
+		color: white;
+		text-align: center;
+		margin: 1% 0 3% 0;
+		font-size: 250%;
 	}
 }
 @media (min-width: 850px) {

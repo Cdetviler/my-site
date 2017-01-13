@@ -2,6 +2,7 @@
 <html>
  <head>
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Charlie Detviler</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- drawer.css -->
@@ -29,7 +30,7 @@
        <section class="floating-text-box">
          <h1>Charlie Detviler</h1>
          <h2>Object Oriented. Communication Oriented. Human Oriented.</h2>
-         <a role="button" href="#about-me">About</a><a role="button" href="#contact">Contact</a>
+         <a class="hvr-ripple-out" role="button" href="#about-me">About</a><a class="hvr-ripple-out" role="button" href="#contact">Contact</a>
        </section>
      </article>
      <!--
@@ -49,11 +50,15 @@
                <a title="Facebook" href=""><i class="fa fa-2x fa-facebook-square" aria-hidden="true"></i></a>
                <a title="twitter" href=""><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></a>
             </li>
-            <li class="email-link">
-              <a title="Email Link" href="mailto:charlie.detviler@gmail.com">E-Mail Me</a>
-            </li>
+
            </ul>
+           <div class="center-buttons">
+               <a class="box-button hvr-ripple-out" title="Email Link" href="mailto:charlie.detviler@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a>
+               <a class="box-button hvr-ripple-out" title="Resume Download" href="Documents/resume.pdf" download="Charlie_Deviler_Resume.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Resume </a>
+           </div>
+
          </div>
+
          <div class="column column-7">
            <h2>How I Got Here</h2>
            <p>
@@ -62,9 +67,7 @@
            <p>
              Fast-forward 21 years and a college degree, and I am in a field that tests my nettle every single day. And I love it. There is nothing more satisfying than creating a usable, robust and fashionable project that makes every-day life easier for someone out there.
            </p>
-           <div class="resume-button">
-             <a  title="Resume Download" href="Documents/resume.pdf" download="Charlie_Deviler_Resume.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Resume </a>
-           </div>
+
          </div>
        </section>
        <!--
@@ -81,6 +84,7 @@
          <img class="project project-image" src="images/wsWebDisplay-1.jpg" alt="picture of charlie"/>
         </div>
         <div class="vert-align column column-7">
+
           <p>
             ws Web Display is one of the larger projects that I have worked on. I developed a front-end that communicated with a node.js based server in order to display live data from sensors and pi-cameras around the world. Using the wonderful <a href="https://jqueryui.com/"> JQuery UI Library</a>, I created an interface that allows the user to construct the page to their liking.
           </p>
@@ -96,10 +100,10 @@
 
        </div>
        <div class="vert-align column column-7">
+
          <p>
            As a developer at APRS World I tackled many projects. The first project that I worked on was converting the APRS World Website from a non-responsive table-based layout to a completely responsive fluid design. It was not an easy transition, as one could imagine, but it turned out to be a much more engaging, adaptive website that can be viewed on any screen.
          </p>
-
       </div>
     </section>
     <section class="vert-space row project-row">
@@ -112,22 +116,125 @@
 
        </div>
        <div class="vert-align column column-7">
+
         <p>
           As the APRS World website grew, it became clear to the owner of the site that micro sites would need to be constructed for the various product lines that APRS World produced. <a href="http://www.breakoutboards-usa.com" title="Breakout Boards website"> Breakoutboards-usa.com</a> is the fruition of the realization. Due to the wide variety of breakout-boards, it was decided that we would need a way for customers to easily find different boards at a glance. I ended up adapting a parametric search library to fulfill this need.
         </p>
       </div>
     </section>
    </article>
+   <article id="skill-set" class="clearfix site-divider">
+     <h1> Skill Set </h1>
+
+     <div class="skill-block column column-12">
+       <div class="bar-border">
+
+         <div id="webDevelopmentBar" class="bg-fabric skill-bar width-80">
+          <i class="fa fa-caret-right" aria-hidden="true"></i><span> Web Development </span>
+         </div>
+       </div>
+       <div class="skill-content">
+         <div class="column column-3">
+           <dl class="inline-block font-135 ">
+             <dd class="language-entry"><i class="green fa icon-javascript-alt"></i> Javascript</dd>
+             <dd class="language-entry"><i class="blue fa fa-css3" aria-hidden="true"></i> CSS3</dd>
+             <dd class="language-entry"><i class="orange fa fa-html5" aria-hidden="true"></i> HTML5</dd>
+           </dl>
+         </div>
+         <div class="column column-8">
+         <p>
+           I have developed and maintained a number of applications and websites for the web. I have had extensive use of Javascript with a focus on AJAX communication using the JSON format. I have used frameworks and libraries such as JQuery, JQueryUI, UIKit, underscore.js, lodash.js.
+         </p>
+       </div>
+       </div>
+
+     </div>
+     <div class="skill-block column column-12">
+       <div class="bar-border">
+
+         <div id="backEndBar" class="bg-dkergrey skill-bar width-70">
+          <i class="fa fa-caret-right" aria-hidden="true"></i><span> Backend Programming </span>
+         </div>
+       </div>
+       <div class="skill-content">
+         <div class="column column-3">
+           <dl class="inline-block font-135">
+              <dd class="language-entry"><i class="purple icon-php-alt"></i> PHP</dd>
+              <dd class="language-entry"><i class="green icon-nodejs"></i> Node.js</dd>
+              <dd class="language-entry"><i class="orange icon-mysql-alt"></i> MySQL</dd>
+            </dl>
+         </div>
+         <div class="column column-8">
+         <p>
+           I have experience with developing server-side applications in addition to my front-end focus. I constructed queries for the company database. I also breifly used node.js in order to develop an in-house Amazon Alexa skill.
+
+         </p>
+       </div>
+      </div>
+     </div>
+     <div class="skill-block column column-12">
+       <div class="bar-border">
+         <div id="appDevBar" class="bg-fabric skill-bar width-90">
+          <i class="fa fa-caret-right" aria-hidden="true"></i><span> Application Development </span>
+         </div>
+       </div>
+       <div class="skill-content">
+         <div class="column column-3">
+           <dl class="inline-block font-135">
+              <dd class="language-entry"><i class="dkgrey icon-java-bold"></i> Java</dd>
+              <dd class="language-entry"><i class="green fa fa-android"></i> Android</dd>
+              <dd class="language-entry"><i class="purple icon-python"></i> Python</dd>
+              <dd class="language-entry"></dd>
+            </dl>
+         </div>
+         <div class="column column-8">
+         <p>
+           At APRS World I improved and maintained a number of java applications, an Android Application and even an LCD interface written with Python. I fixed bugs, implemented feature requests, and improves the user experience on all applications.
+
+         </p>
+       </div>
+       </div>
+     </div>
+     <div class="row">
+
+
+   </div>
+
+   <div class="skill-block column column-12">
+     <div class="bar-border">
+       <div id="toolsBar" class="bg-dkergrey skill-bar width-70">
+        <i class="fa fa-caret-right" aria-hidden="true"></i><span> Tools</span>
+       </div>
+     </div>
+     <div class="skill-content">
+       <div class="column column-3">
+         <dl class="inline-block font-135">
+            <dd class="language-entry"><i class="red icon-ubuntu"></i> Ubuntu </dd>
+            <dd class="language-entry"><i class="dkgrey icon-shell"></i> Linux Shell </dd>
+            <dd class="language-entry"><i class="brown fa fa-git-square" aria-hidden="true"></i> Git</dd>
+          </dl>
+       </div>
+       <div class="column column-8">
+         <p>
+           I work primarily in a linux-based environment. Because of this knowledge, I am able to use git version control via the command line.
+
+         </p>
+       </div>
+    </div>
+   </div>
+
+  </article>
+  <!--
    <article id="skill-set" class="site-divider">
      <h1> Skill Set </h1>
 
      <section class="vert-space row">
-       <div class="row">
+       <div class="vert-space row">
          <h2>Web Development</h2>
          <div class="column column-4 min-width-250">
 
            <dl class="inline-block font-135 ">
-             <dd class="language-entry"><i class="green icon-javascript-alt"></i> Javascript</dd>
+             <dd class="language-entry"><i class="green fa icon-javascript-alt"></i> Javascript</dd>
              <dd class="language-entry"><i class="blue fa fa-css3" aria-hidden="true"></i> CSS3</dd>
              <dd class="language-entry"><i class="orange fa fa-html5" aria-hidden="true"></i> HTML5</dd>
            </dl>
@@ -139,7 +246,7 @@
           </p>
           </div>
        </div>
-       <div class="row">
+       <div class="vert-space row">
          <h2>Application Development</h2>
          <div class="column column-4 min-width-250">
 
@@ -157,7 +264,7 @@
             </p>
           </div>
        </div>
-       <div class="row">
+       <div class="vert-space row">
          <h2>Back-end Programming</h2>
 
          <div class="column column-4 min-width-250">
@@ -175,7 +282,7 @@
             </p>
           </div>
        </div>
-        <div class="row">
+        <div class="vert-space row">
           <h2> Tools </h2>
 
           <div class="column column-4 min-width-250">
@@ -194,13 +301,49 @@
         </div>
      </section>
    </article>
-   <article id="contact" class="site-divider">
+  -->
+   <article id="contact" class="site-divider row">
      <h1> Contact Me </h1>
+     <a class="contact-square contact-mail">
+       <span class="vert-align vert-span inline-block"></span>
+       <div class="floating-text-box">
+         <span>Charlie.Detviler@gmail.com</span>
+       </div>
+       <i class="fa fa-4x fa-envelope" aria-hidden="true"></i>
+     </a>
+     <a class="contact-square contact-gh">
+       <span class="vert-align vert-span inline-block"></span>
+       <div class="floating-text-box">
+         <span>@cdetviler</span>
+       </div>
+       <i class="fa fa-4x fa-github" aria-hidden="true"></i>
+     </a>
+     <a class="contact-square contact-fb">
+       <span class="vert-align vert-span inline-block"></span>
+       <div class="floating-text-box">
+         <span>@charlie.detviler</span>
+       </div>
+       <i class="fa fa-4x fa-facebook-official" aria-hidden="true"></i>
+     </a>
 
+     <a class="contact-square contact-li">
+       <span class="vert-align vert-span inline-block"></span>
+       <div class="floating-text-box">
+         <span>in/charliedetviler</span>
+       </div>
+       <i class="fa fa-4x fa-linkedin-square" aria-hidden="true"></i>
+     </a>
+     <a class="contact-square contact-twitter">
+       <span class="vert-align vert-span inline-block"></span>
+       <div class="floating-text-box">
+         <span>@cdetviler</span>
+       </div>
+       <i class="fa fa-4x fa-twitter-square" aria-hidden="true"></i>
+     </a>
+    </article>
 
-   </article>
    </div>
-
+   
 
  </body>
 </html>
